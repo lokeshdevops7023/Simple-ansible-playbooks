@@ -1,0 +1,10 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+  - name: Installing HTTPD package
+    yum: name=httpd state=present
+  - name: removing HTTPD package
+    yum: name=httpd state=absent
+  - name: installing wget package
+    yum: name=wget
